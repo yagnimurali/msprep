@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: order-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: dev
+server:
+  port: 0
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    info:
+      enabled: true
+info:
+  app:
+    version: 1.0.0
+    name: My Spring Boot Application
+    description: This is a sample application to demonstrate Actuator endpoints.
+  company:
+    location: USA
+    name: My Company
